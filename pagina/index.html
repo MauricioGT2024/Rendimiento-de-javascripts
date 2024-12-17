@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rendimiento de javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h2>Global</h2>
+
+      <textarea id="global" class="code" rows="1">
+const data = [...Array(1000).keys()]</textarea
+      >
+      <h2>Test Cases</h2>
+      <div class="test-cases">
+        <article class="test-case">
+          <header>
+            <span class="test-id">1</span>
+            <span class="ops">203,360 ops/s</span>
+          </header>
+          <textarea class="code" rows="1">data.find(x => x == 100)</textarea>
+        </article>
+
+        <article class="test-case">
+          <header>
+            <span class="test-id">2</span>
+            <span class="ops">150,360 ops/s</span>
+          </header>
+          <textarea class="code" rows="1">data.find(x => x == 200)</textarea>
+        </article>
+
+        <article class="test-case">
+          <header>
+            <span class="test-id">3</span>
+            <span class="ops">100,360 ops/s</span>
+          </header>
+          <textarea class="code" rows="1">data.find(x => x == 400)</textarea>
+        </article>
+
+        <article class="test-case">
+          <header>
+            <span class="test-id">4</span>
+            <span class="ops">50,360 ops/s</span>
+          </header>
+          <textarea class="code" rows="1">data.find(x => x == 800)</textarea>
+        </article>
+      </div>
+
+      <button class="send-button">Benchmark code! 🚀</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
